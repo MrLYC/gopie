@@ -9,8 +9,9 @@ import (
 func Parse() {
 	var help bool
 	flag.BoolVar(&help, "h", false, "help message")
-	flag.StringVar(&Address, "l", "0.0.0.0:8000", "listening address")
-	flag.BoolVar(&Debug, "debug", false, "debug mode")
+	flag.StringVar(&Address, "l", Address, "listening address")
+	flag.StringVar(&WorkDir, "w", WorkDir, "work directory")
+	flag.BoolVar(&Debug, "debug", Debug, "debug mode")
 	flag.Parse()
 
 	if help {
